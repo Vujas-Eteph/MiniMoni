@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# -------------------------------------------------------
+# Script Name: minimoni
+# Description: MiniMoni: A Streamlined Command-Line Tool for Real-Time Monitoring of GPU and CPU Usage.
+# Author: Vujas-Eteph (Stéphane Vujasinovic)
+# GitHub: https://github.com/Vujas-Eteph/MiniMoni
+# License: MIT License
+# -------------------------------------------------------
+
 
 # - FUNCTIONS ---
 # Check Resize available
