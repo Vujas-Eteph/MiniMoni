@@ -3,12 +3,7 @@
 
 ---
 
-Monitor your GPUs and CPUs (number of users) with a minimal terminal window.
-Ideal for server environments or any setup requiring a compact monitoring solution.
-
-> [!NOTE] 
-> If possible the script wills adjust automatically terminal's size to the number of GPUS on the device and the number of active users on the machine. 
-
+Monitor GPUs and CPUs (number of users) with a minimal terminal window.
 
 Example of the output:
 ```bash
@@ -24,7 +19,13 @@ user_id  pts/5    tmux(21348).%0   14:00    1.00s  0.05s  0.05s -bash
 
 ```bash
 pip intall gpustat
+```
 
+## Usage
+(for the moment...)
+
+```bash
+bash minimoni.sh
 ```
 
 ## Credits
