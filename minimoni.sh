@@ -1,13 +1,26 @@
 #!/bin/bash
 
-# Function to resize the terminal based on the number of GPUs and users
+
+# - FUNCTIONS ---
+# Check Resize available
+check_resize_available() {
+    command -v resize >/dev/null 2>&1
+}
+
+# Resize the terminal based on the number of GPUs and users
 resize_terminal() {
     local num_gpus=$1
     local num_users=$2
     local shell_width=$((num_gpus * 2 + 1 + 1 + num_users + 2))
-    resize -s $shell_width 85
+    
+    if check_resize_available; then
+        resize -s $shell_width 85
+    else
+        echo "Resize command not available. Adjust terminal size manually to width: $shell_width."
+    fi
 }
 
+# - MAIN ---
 # Get the number of GPUs
 monis_num_gpus=$(nvidia-smi -L | wc -l)
 
